@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React re-renders
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+![thai_style_chicken_noodle_soup_pieces_recipe_web](https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15441/REDESIGN-ReactNativePerformance-Luke_Social-2d4e17555bff22e44357e1311f309dba.png)
 
-### `yarn start`
+We've learned that even when react is pretty fast, there's situatons where expensive components render to often causing performance issues. You already know how to prevent a component to be re-rendered by lifting the expensive component or using React.memo, use both to avoid re-render onn this lab.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+⚠️ Don't worry if the app take some time to render, it's ok since we try to simulate a performance issue.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Requirements
 
-### `yarn test`
+- Fork this repo
+- Clone this repo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Submission
 
-### `yarn build`
+- Upon completion, run the following commands:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ```
+  git add .
+  git commit -m "Completed lab"
+  git push origin master
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create Pull Request so your TAs can check up your work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instructions
 
-### `yarn eject`
+### Iteration 1 - Counter with an expensive component
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For the first iteration you will have to reduce the amount of times the expensive component renders. We havee a counter that can increase or increase by clicking on a couple of buttons, use the Chrome dev tools and the React profiler to identify the performance issue, then fix the issue with React.memo.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Iteration 2 - List
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In this exercise you have a list of elements and the ability to filter this list, your work now it's to avoid the re-render previous showed elements. When you pass from the filtered results to the entire list, some of the elements don't need to be re-rendered since they were already on the window.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Every card is being re-rendered as we type.
 
-## Learn More
+![](https://i.postimg.cc/5NwN85y8/ezgif-3-d2bf03f527ba.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Once you add the necessary code to avoid the cards re-render you sould see the cards already printed not being rendered.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](https://i.postimg.cc/TwzfDhXk/Captura-de-Pantalla-2021-02-08-a-la-s-1-33-21.png)
 
-### Code Splitting
+## Bonus
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Use the wrapper component instead of React.memo to avoid both previous iterations re-renders.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding! 💙
